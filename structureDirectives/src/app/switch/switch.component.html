@@ -1,0 +1,23 @@
+<h1>Switch Component</h1>
+<!-- used to render the html elements
+
+used to compare the property value with multiple values
+
+ syntax :-
+ <div [ngSwitch]="propertyname">
+    <div *ngSwitchCase="'propertyvalue'">statements</div>
+    <div *ngSwitchCase="'propertyvalue'">statements</div>
+    <div *ngSwitchCase="'propertyvalue'">statements</div>
+                            .
+                            .
+                            .
+    <div *ngSwitchDefault>statements</div>
+ </div> -->
+
+<div [ngSwitch]="name">
+    <h3 *ngSwitchCase="'red'">Its red</h3>
+    <h3 *ngSwitchCase="'pink'">Its pink</h3>
+    <h3 *ngSwitchCase="'blue'">Its blue</h3>
+    <h3 *ngSwitchCase="'yellow'">Its yellow</h3>
+    <h3 *ngSwitchDefault>pick again</h3>
+</div>

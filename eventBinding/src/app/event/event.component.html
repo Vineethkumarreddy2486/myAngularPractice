@@ -1,0 +1,46 @@
+<h1>This is event component</h1>
+
+                        <!-- EVENT BINDING -->
+<!-- In data binding the flow will be from class to template,if we update anything in class template will be updated automatically
+ But sometimes for user responses like mouseclick,keysdown we need to make the 
+ flow from template to class there we use "Event Binding" which capture the events 
+ 
+ syntax :<button (eventhandler)="methodname">buttonname</button>--->
+
+
+ <button (click)="greetings()">Greet</button><br>
+ <button (click)="invitation()">invite</button> {{invite}}
+
+
+<!-- $event :-it is a special variable which gives all the inormation about 
+ the event handler we are using -->
+
+<button (click)="specialVariable($event)">special</button>
+
+<!-- without seperate method in class -->
+
+<button (click)="sub='subscribed'">subscribe</button>{{sub}}
+
+
+
+                <!-- TEMPLATE REFERENCE VARIABLES -->
+<!-- These are the variables which helps us to get the data from view to class
+given by the users through input field to perform tasks.
+ syntax:- <input #varname type='text'>
+          <button (click)="methodname(varname.value)"-->
+
+<input #myInp type="text">
+<button (click)="logmessages(myInp.value)">Log</button>
+{{message}}
+
+
+
+            <!-- TWO-WAY DATA BINDING -->
+<!-- the process of updating the property value inside the class and displaying it by giving the value 
+ through input tag.
+ 1)import formmodule in event.ts file 
+ 2)import formmodule in imports-->
+
+<input [(ngModel)]="userName" type="email" name="" id="">{{userName}}
+<input [(ngModel)]="PassWord" type="password" name="" id="">{{PassWord}}
+

@@ -1,0 +1,63 @@
+                                <!-- PROPERTY BINDING-->
+ <!-- property binding is the process of making attributes dynamic by rapping them into square braces 
+  2.We can also use interpolation instead of property binding
+  3.But there are some limitations in Interpolation ,they do not work in some cases like boolean expressions True or false
+  4.Hence we'll go with property binding -->
+<h2>Welcome Data Binding</h2>
+<input type="text" name="" [id]="myId" [value]="name">
+<input type="text" [value]="myId">
+<input [disabled]="isDisabled" type="text" value="{{name}}" [id]="myId">
+
+
+<!-- Another syntax for property binding -->
+ <!-- bind-attribute="variable name" -->
+
+<input type="text" name="" id="" bind-value="name">
+<input type="text" bind-id="myId">
+
+
+                         <!-- CLASS-BINDING -->
+
+<!-- 
+1.Binding the classes by using class attribute  
+2.You would be created some classes for this in scss file
+3.Syntax :- class='className' or [class]='variable name'-->
+
+<h1 class="text-success">Vineeth Reddy</h1>
+<h2 class="text-danger">Vineeth reddy</h2>
+<h1 class="text-special">Vineeth Reddy</h1>
+
+
+<h1 class="text-danger" [class]="specialized">Vineeth Reddy</h1>
+
+<!-- if we want to apply conditionally to the single class based on the expressions true or false -->
+<h1 [class.text-danger]="hasError">Vineeth</h1>
+
+<!-- if we want to apply conditionally to the multiple class based on the expressions true or false
+   1. We have [ngclass] directive(directive is a custom html attribute)-->
+
+<h2 [ngClass]="messages">Vineeth Reddy</h2>
+
+
+
+                                <!--STYLE BINDING  -->
+<!-- 1.style binding is used to apply inline styles to html elements
+     2.It is similar to class binding
+     syntax :- [style.cssproperty]="'value'" -->
+
+<h1 [style.color]="'blue'">Style Binding</h1>
+
+<!-- we can also use conditional operators -->
+ <h1 [style.color]="Error?'green':'red'">Style Binding</h1>
+ <h1 [style.color]="haveError?'green':'red'">Style Binding</h1>
+
+ <!-- applying multiple peoperties by using [ngStyle] -->
+
+<h2 [ngStyle]="titleStyles">Multiple Properties</h2>
+
+
+
+
+
+
+

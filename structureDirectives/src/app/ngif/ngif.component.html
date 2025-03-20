@@ -1,0 +1,23 @@
+<p>ngif works!</p>
+<!-- this is used to render the html elements 
+ syntax 1 :- <h1 *ngif='value'></h1>-->
+
+<h1 *ngIf="display">This is not hidden</h1>
+
+<!-- syntax 2:-rendering else block by using ng-template -->
+ <h6>syntax :-2</h6>
+<h1 *ngIf="display ; else elseBlock">This is true block</h1>   <!--else is a keyword-->
+<ng-template #elseBlock>                            <!--ng-template is a container-->
+    <h1>This is else Block</h1>
+</ng-template>
+
+<!-- syntax :-3  -->
+ <h6>syntax :-3</h6>
+<div *ngIf="display then thenBlock;else elseblock"></div>
+<ng-template #thenBlock>
+    <h1>this is True block or then block</h1>
+</ng-template>
+<ng-template #elseblock>
+    <h1>This is elseblock</h1>
+</ng-template>
+

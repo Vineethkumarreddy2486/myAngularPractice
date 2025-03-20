@@ -1,0 +1,51 @@
+<!-- Pipes are used to tranform the data from one form to another form before diaplaying in
+ view, and the pipes changes the property value form only in the view not in class. The 
+ property value in the class remains same 
+ 
+ ** import commonModule in pipes.component.ts file-->
+
+
+<h2>Pipes Component</h2>
+<h3>{{name}}</h3>
+<h3>{{currentDate}}</h3>
+<h3>{{personDetails}}</h3>
+<h3>{{personDetails.gender}}</h3>
+
+<!-- performing on strings -->
+
+<h2>{{name | uppercase }}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{name | slice:2:7}}</h2>
+<h3>{{personDetails | json}}</h3>
+
+<!-- on numbers -->
+<h2>{{num1}}</h2>
+<h2>{{num1 | number:'3.2-6' }}</h2>
+<h2>{{num2 | percent }}</h2>
+<h2>{{num1 | currency :'EUR'}}</h2>
+<h2>{{num1 | currency :'EUR':'code'}}</h2>
+
+<!-- on date -->
+<h2>{{currentDate | date:'short' }}</h2>
+<h2>{{currentDate | date:'medium'}}</h2>
+<h2>{{currentDate | date:'shortDate'}}</h2>
+<h2>{{currentDate | date:'shortTime'}}</h2>
+
+<!-- Custom pipe -->
+ <!-- <input [(ngModel)]="studentMarks" type="text" name="" id="">{{studentMarks }} -->
+
+<!-- 
+ 1. ng g p yourPipeName   ,you will get two file with the extensions spec.ts and .ts
+ 2. write your logic in transform in .ts file
+ 3.Register them in either app.component.ts or pipes.component.ts by following
+   i)@component({
+     standalone; true,
+     imports:[yourPipeName]
+    })
+ 4.use it in your template-->
+
+<h1>{{studentMarks/totalmarks | myCustomPipe }}</h1>
+
+
+
