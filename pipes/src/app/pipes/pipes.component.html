@@ -2,8 +2,7 @@
  view, and the pipes changes the property value form only in the view not in class. The 
  property value in the class remains same 
  
- ** import commonModule in pipes.component.ts file
-and import the pipeName in imports-->
+ ** import commonModule in pipes.component.ts file to use predefined pipes-->
 
 
 <h2>Pipes Component</h2>
@@ -34,9 +33,7 @@ and import the pipeName in imports-->
 <h2>{{currentDate | date:'shortTime'}}</h2>
 
 <!-- Custom pipe -->
- <!-- <input [(ngModel)]="studentMarks" type="text" name="" id="">{{studentMarks }} -->
-
-<!-- 
+ 
  1. ng g p yourPipeName   ,you will get two file with the extensions spec.ts and .ts
  2. write your logic in transform in .ts file
  3.Register them in either app.component.ts or pipes.component.ts by following
