@@ -12,3 +12,4 @@ import { MyCustomPipePipe } from './my-custom-pipe.pipe';
 export class AppComponent {
   title = 'pipes';
 }
+ 

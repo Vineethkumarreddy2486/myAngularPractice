@@ -1,0 +1,16 @@
+<!-- services are used to share the data among multiple components, to implement the application
+ logic and for external interaction like connecting with database 
+ 
+STEPS:-
+1. generate a service by giving command
+        ng g s serviceName
+2.open service.ts file and write a logic you required
+3.Open the component.ts file in which you wanted to use this service and write
+    constructor(private.VarName:serviceName){}
+  =>if you want yo use this service in multiple components you have write this constructor in 
+  every component.ts file-->
+
+
+<h1>App component</h1>
+<app-employee-list></app-employee-list>
+<app-employee-details></app-employee-details>
