@@ -11,7 +11,7 @@ export class EmployeeService {
     return [
       {"firstName":"Vineeth","lastName":"Challa","gender":"male"},
       {"firstName":"Vivin","lastName":"Reddy","gender":"male"},
-      {"firstName":"Tejo","lastName":"Reddy","gender":"male'"}
+      {"firstName":"Tejo","lastName":"Reddy","gender":"male"}
     ]
   }
 }

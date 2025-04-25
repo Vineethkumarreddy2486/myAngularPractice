@@ -1,4 +1,12 @@
 <p>employee-list works!</p>
-<div *ngFor="let emp of Emp_list">
-    <h1> {{ emp.name }}</h1>
+
+<div *ngIf="Emp_list.length>0">
+    <div *ngFor="let emp of Emp_list">
+        <h1> {{ emp.name }}</h1>
+    </div>
 </div>
+
+<div *ngIf="errorMsg">
+    <h1>{{ errorMsg}}</h1>
+</div>
+
