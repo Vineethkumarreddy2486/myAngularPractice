@@ -3,10 +3,12 @@
 <nav>
 
   <!-- routing  by using routerlink directly in html-->
-
+  
   <button routerLink="about" routerLinkActive="active"><h3>about</h3></button>  <!--about and home are paths in router.ts-->
   <button routerLink="home" routerLinkActive="active"><h3>home</h3></button>
 </nav>
 
+<!--routing without routerLink which means routing through the .js file , go to about.component.ts for code   -->
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>      
+<!-- it decides where the routing data has to be displayed mostly it will be written in root.component.html -->
