@@ -9,7 +9,7 @@ import { throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class EmployeeService {
-  private _url: string = 'data1.json';
+  private _url: string = 'data.json';
 
   constructor(private http: HttpClient) { }
 
