@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { TownComponent } from './town/town.component';
 import { CityComponent } from './city/city.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {path:'',
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path:'about',component:AboutComponent},
     {path:'home',component:HomeComponent},
     {path:'town',component:TownComponent},
-    {path:'city',component:CityComponent}
+    {path:'city',component:CityComponent},
+    {path:'**',component:PageNotFoundComponent}
 ];
