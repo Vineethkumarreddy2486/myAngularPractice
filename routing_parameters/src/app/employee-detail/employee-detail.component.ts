@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EmployeeDetailComponent implements OnInit{
   public dName :any='';
-constructor(private _receive:ActivatedRoute){}       
+constructor(private _receive:ActivatedRoute){}       // imported
  ngOnInit(): void {
    let de=this._receive.snapshot.paramMap.get('deptname');  //This gets the value of deptname from a URL like:
    this.dName=de;
