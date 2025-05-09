@@ -1,6 +1,8 @@
 <p>employee-list works!</p>
-<ul *ngFor="let dep of deptList">
-    <button (click)="onSelect(dep)">
-        <li>{{dep.id}}-{{dep.deptname}}</li>
-    </button>
+<ul  class="items">
+    <li *ngFor="let dep of deptList" (click)="onSelect(dep)">
+        <button  [class.selected]="isSelected(dep)">
+            {{dep.id}}-{{dep.deptname}}
+        </button>
+    </li>
 </ul>

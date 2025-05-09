@@ -1,2 +1,10 @@
 
-<h2>You have selected "{{dName}}" department</h2>
+<h2>You have selected "{{dId}}" department</h2>
+<p>
+    <button (click)="overview()">overview</button>
+    <button (click)="contact()">contact</button>
+</p>
+<router-outlet></router-outlet>
+<button (click)="onNext()" href="">next</button>
+<button (click)="onPrevious()" href="">previous</button><br>
+<button (click)="goToDeptList()">back</button>
